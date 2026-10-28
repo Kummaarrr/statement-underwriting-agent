@@ -1,0 +1,687 @@
+{
+ "aggregate": {
+  "files": 15,
+  "errors": 0,
+  "figure_accuracy_pct": {
+   "revenue": 73.3,
+   "avg_daily_balance": 66.7,
+   "nsf_count": 100.0,
+   "overdraft_count": 100.0,
+   "negative_days": 93.3,
+   "debt": 100.0
+  },
+  "all_correct_pct": 66.7,
+  "straight_through_pct": 33.3,
+  "flag_rate_pct": 66.7,
+  "wrong_on_ready": 0,
+  "ready_files": 5,
+  "tamper_recall_pct": 100.0,
+  "false_alarm_pct": 54.5,
+  "seconds_per_file": 65.6,
+  "usd_per_file": 0.0119,
+  "by_variant": {
+   "digital": {
+    "files": 7,
+    "all_correct_pct": 85.7,
+    "flag_rate_pct": 71.4
+   },
+   "scanned": {
+    "files": 4,
+    "all_correct_pct": 100.0,
+    "flag_rate_pct": 25.0
+   },
+   "tampered": {
+    "files": 4,
+    "all_correct_pct": 0.0,
+    "flag_rate_pct": 100.0
+   }
+  }
+ },
+ "files": [
+  {
+   "id": "app-000",
+   "variant": "tampered",
+   "expected_verdict": "needs_review",
+   "verdict": "needs_review",
+   "figures": {
+    "revenue": false,
+    "avg_daily_balance": false,
+    "nsf_count": true,
+    "overdraft_count": true,
+    "negative_days": false,
+    "debt": true
+   },
+   "seconds": 67.25767170000472,
+   "cost_usd": 0.0085033,
+   "reason": "Statement totals and fee counts reconcile, but the file needs review: 6 NSF/returned-item fees (1 in July, 5 in September), end-of-day balance negative on 08/28-08/30 (low -110.53), and a $34,340 wire-in on 08/03 from Rapidline Capital that was excluded as loan proceeds. Rapidline's weekly ACH debits are classified as an MCA from the file alone; the lender should confirm the product type and whether any other advances exist.",
+   "detail": {
+    "avg_monthly_revenue": [
+     64539.77,
+     62675.03
+    ],
+    "avg_daily_balance": [
+     12308.9,
+     10740.17
+    ],
+    "nsf_count": [
+     6,
+     6
+    ],
+    "overdraft_count": [
+     0,
+     0
+    ],
+    "negative_days": [
+     3,
+     6
+    ],
+    "debt": [
+     2,
+     2
+    ]
+   }
+  },
+  {
+   "id": "app-002",
+   "variant": "tampered",
+   "expected_verdict": "needs_review",
+   "verdict": "needs_review",
+   "figures": {
+    "revenue": false,
+    "avg_daily_balance": false,
+    "nsf_count": true,
+    "overdraft_count": true,
+    "negative_days": true,
+    "debt": true
+   },
+   "seconds": 58.326924599998165,
+   "cost_usd": 0.010108,
+   "reason": "Rapidline Capital wired 19,840 on 07/16 (excluded from revenue as advance proceeds) and daily ACH debits now stack from Northstar (300) and Rapidline (235); a 17,057.04 COSMOPROF AUTOPAY on 07/23 is an outlier needing review; the May statement's stated average daily balance of 23,534.22 differs from the recomputed 23,534.87, and the Northstar debit frequency is inferred as daily.",
+   "detail": {
+    "avg_monthly_revenue": [
+     75430.39,
+     73886.13
+    ],
+    "avg_daily_balance": [
+     46709.57,
+     46170.18
+    ],
+    "nsf_count": [
+     0,
+     0
+    ],
+    "overdraft_count": [
+     0,
+     0
+    ],
+    "negative_days": [
+     0,
+     0
+    ],
+    "debt": [
+     3,
+     3
+    ]
+   }
+  },
+  {
+   "id": "app-005",
+   "variant": "digital",
+   "expected_verdict": "ready",
+   "verdict": "ready",
+   "figures": {
+    "revenue": true,
+    "avg_daily_balance": true,
+    "nsf_count": true,
+    "overdraft_count": true,
+    "negative_days": true,
+    "debt": true
+   },
+   "seconds": 58.293256000004476,
+   "cost_usd": 0.0157666,
+   "reason": "All five statements reconcile: opening balances, deposit and withdrawal totals, and running balances tie to the account summaries. No returned items, NSF or overdraft fees, and no returned deposits. Crownview daily remits and Machinery Credit monthly payments identified as existing debt.",
+   "detail": {
+    "avg_monthly_revenue": [
+     57764.35,
+     57764.35
+    ],
+    "avg_daily_balance": [
+     31990.94,
+     31989.77
+    ],
+    "nsf_count": [
+     0,
+     0
+    ],
+    "overdraft_count": [
+     0,
+     0
+    ],
+    "negative_days": [
+     0,
+     0
+    ],
+    "debt": [
+     2,
+     2
+    ]
+   }
+  },
+  {
+   "id": "app-011",
+   "variant": "scanned",
+   "expected_verdict": "ready",
+   "verdict": "ready",
+   "figures": {
+    "revenue": true,
+    "avg_daily_balance": true,
+    "nsf_count": true,
+    "overdraft_count": true,
+    "negative_days": true,
+    "debt": true
+   },
+   "seconds": 80.36323940000148,
+   "cost_usd": 0.012383700000000001,
+   "reason": "All four statements reconcile to their activity summaries and running balances; figures can be relied on. Note September 2026 revenue is down about 46% from the prior three-period level and the ending balance fell to $4,004.81.",
+   "detail": {
+    "avg_monthly_revenue": [
+     185329.86,
+     185329.86
+    ],
+    "avg_daily_balance": [
+     53562.22,
+     53562.22
+    ],
+    "nsf_count": [
+     0,
+     0
+    ],
+    "overdraft_count": [
+     0,
+     0
+    ],
+    "negative_days": [
+     0,
+     0
+    ],
+    "debt": [
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "id": "app-016",
+   "variant": "digital",
+   "expected_verdict": "ready",
+   "verdict": "ready",
+   "figures": {
+    "revenue": true,
+    "avg_daily_balance": true,
+    "nsf_count": true,
+    "overdraft_count": true,
+    "negative_days": true,
+    "debt": true
+   },
+   "seconds": 63.97840750000614,
+   "cost_usd": 0.0165777,
+   "reason": "All six periods reconcile to opening and ending balances and to the bank's stated average ledger balances; owner transfers from business savings (21,919.60; 39,290.67; 16,923.70) excluded from revenue; five unlabeled DEPOSIT credits (12,696.64 total) are counted as revenue.",
+   "detail": {
+    "avg_monthly_revenue": [
+     269572.72,
+     269572.72
+    ],
+    "avg_daily_balance": [
+     110987.7,
+     110987.7
+    ],
+    "nsf_count": [
+     0,
+     0
+    ],
+    "overdraft_count": [
+     0,
+     0
+    ],
+    "negative_days": [
+     0,
+     0
+    ],
+    "debt": [
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "id": "app-017",
+   "variant": "tampered",
+   "expected_verdict": "needs_review",
+   "verdict": "needs_review",
+   "figures": {
+    "revenue": false,
+    "avg_daily_balance": false,
+    "nsf_count": true,
+    "overdraft_count": true,
+    "negative_days": true,
+    "debt": true
+   },
+   "seconds": 33.99259280000115,
+   "cost_usd": 0.007523800000000001,
+   "reason": "Figures reconcile arithmetically, but the September statement shows visibly different fonts on several deposit amounts and on the daily balance column, which may indicate editing; verify against the original. July revenue excludes a 19,354.70 transfer from share 8068, and September revenue is net of a 1,304.34 returned deposit item.",
+   "detail": {
+    "avg_monthly_revenue": [
+     295833.8,
+     291842.64
+    ],
+    "avg_daily_balance": [
+     105081.66,
+     102205.92
+    ],
+    "nsf_count": [
+     0,
+     0
+    ],
+    "overdraft_count": [
+     0,
+     0
+    ],
+    "negative_days": [
+     0,
+     0
+    ],
+    "debt": [
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "id": "app-019",
+   "variant": "tampered",
+   "expected_verdict": "needs_review",
+   "verdict": "needs_review",
+   "figures": {
+    "revenue": false,
+    "avg_daily_balance": false,
+    "nsf_count": true,
+    "overdraft_count": true,
+    "negative_days": true,
+    "debt": true
+   },
+   "seconds": 53.01282160000119,
+   "cost_usd": 0.010954100000000001,
+   "reason": "Statement 4 opening balance 14,987.71 does not match statement 3 closing balance 19,766.94 (gap 4,779.23), so the chain of balances breaks at 08/23/2026. Several rows on the August statement also render in a different font and weight than the rest of the document, which may indicate editing. Average daily balance uses the printed balances and is unreliable for the final period until the break is resolved. Revenue, NSF and overdraft figures reconcile to each statement's summary totals.",
+   "detail": {
+    "avg_monthly_revenue": [
+     38962.38,
+     37767.57
+    ],
+    "avg_daily_balance": [
+     10815.91,
+     10508.19
+    ],
+    "nsf_count": [
+     0,
+     0
+    ],
+    "overdraft_count": [
+     0,
+     0
+    ],
+    "negative_days": [
+     0,
+     0
+    ],
+    "debt": [
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "id": "app-020",
+   "variant": "scanned",
+   "expected_verdict": "ready",
+   "verdict": "needs_review",
+   "figures": {
+    "revenue": true,
+    "avg_daily_balance": true,
+    "nsf_count": true,
+    "overdraft_count": true,
+    "negative_days": true,
+    "debt": true
+   },
+   "seconds": 80.67891220000456,
+   "cost_usd": 0.014330700000000002,
+   "reason": "Statement totals reconcile, but the file needs human review: the 08/10 NSF fee cites a PAYCHEX payroll debit dated 08-07 and the 09/02 NSF fee cites a SPRUCE SPRINGS rent debit dated 09-01, and neither debit appears in the transaction detail (the 09/03 rent debit of 9,172.00 cleared); the 08/14 COSMOPROF AUTOPAY debit of 39,617.23 is a large outlier against typical recurring debits of about 500 to 1,500; the 08/12 wire of 50,927.00 from IRONGATE ADVANCE was excluded as loan proceeds; and recurring Zelle payments to an individual (Mei Sandoval) are unexplained.",
+   "detail": {
+    "avg_monthly_revenue": [
+     60184.8,
+     60184.8
+    ],
+    "avg_daily_balance": [
+     7499.41,
+     7499.41
+    ],
+    "nsf_count": [
+     2,
+     2
+    ],
+    "overdraft_count": [
+     7,
+     7
+    ],
+    "negative_days": [
+     8,
+     8
+    ],
+    "debt": [
+     2,
+     2
+    ]
+   }
+  },
+  {
+   "id": "app-021",
+   "variant": "digital",
+   "expected_verdict": "ready",
+   "verdict": "needs_review",
+   "figures": {
+    "revenue": true,
+    "avg_daily_balance": true,
+    "nsf_count": true,
+    "overdraft_count": true,
+    "negative_days": true,
+    "debt": true
+   },
+   "seconds": 58.48430709999229,
+   "cost_usd": 0.009470300000000001,
+   "reason": "Statement balances and deposit totals reconcile, but the 07/15/2026 statement shows a $27,483.00 incoming wire from BrightPath Funding, excluded from revenue as advance proceeds, followed by recurring $233.00 daily BrightPath debits; this new advance is not disclosed in the file and needs confirmation of the agreement and any other stacked funding. Also, recurring Zelle payments to Marcus Mercer ($1,163 to $1,588 roughly every two weeks) are unexplained and could be undisclosed debt or owner draws.",
+   "detail": {
+    "avg_monthly_revenue": [
+     65178.3,
+     65178.3
+    ],
+    "avg_daily_balance": [
+     46989.13,
+     46981.38
+    ],
+    "nsf_count": [
+     0,
+     0
+    ],
+    "overdraft_count": [
+     0,
+     0
+    ],
+    "negative_days": [
+     0,
+     0
+    ],
+    "debt": [
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "id": "app-023",
+   "variant": "scanned",
+   "expected_verdict": "ready",
+   "verdict": "ready",
+   "figures": {
+    "revenue": true,
+    "avg_daily_balance": true,
+    "nsf_count": true,
+    "overdraft_count": true,
+    "negative_days": true,
+    "debt": true
+   },
+   "seconds": 92.3536724000005,
+   "cost_usd": 0.0122676,
+   "reason": "Statement summaries reconcile to transaction detail for all three periods; the 08/19 savings transfer was excluded as an owner transfer; 09/29 is the only negative day; stacked daily MCA debits and two September overdraft fees are noted for credit review.",
+   "detail": {
+    "avg_monthly_revenue": [
+     233563.92,
+     233563.92
+    ],
+    "avg_daily_balance": [
+     51543.32,
+     51559.57
+    ],
+    "nsf_count": [
+     0,
+     0
+    ],
+    "overdraft_count": [
+     2,
+     2
+    ],
+    "negative_days": [
+     1,
+     1
+    ],
+    "debt": [
+     2,
+     2
+    ]
+   }
+  },
+  {
+   "id": "app-024",
+   "variant": "digital",
+   "expected_verdict": "ready",
+   "verdict": "needs_review",
+   "figures": {
+    "revenue": true,
+    "avg_daily_balance": true,
+    "nsf_count": true,
+    "overdraft_count": true,
+    "negative_days": true,
+    "debt": true
+   },
+   "seconds": 119.69573000000673,
+   "cost_usd": 0.017042500000000002,
+   "reason": "Statements reconcile to their summary totals, but the file needs review: 6 negative-balance days, 1 NSF and 4 overdraft fees (incl. Jun-Jul 2026), and average ledger balance falling to about 9.3k in July. Owner savings transfers (XFER FROM SAV 4746, about 25.6k in total) were excluded from revenue, and the Paychex returned-debit reversal was excluded. Harborside Ridge S Corp payments were counted as customer revenue and should be confirmed as third-party rather than a related entity.",
+   "detail": {
+    "avg_monthly_revenue": [
+     134695.65,
+     134695.65
+    ],
+    "avg_daily_balance": [
+     22159.22,
+     22159.22
+    ],
+    "nsf_count": [
+     1,
+     1
+    ],
+    "overdraft_count": [
+     4,
+     4
+    ],
+    "negative_days": [
+     6,
+     6
+    ],
+    "debt": [
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "id": "app-027",
+   "variant": "scanned",
+   "expected_verdict": "ready",
+   "verdict": "ready",
+   "figures": {
+    "revenue": true,
+    "avg_daily_balance": true,
+    "nsf_count": true,
+    "overdraft_count": true,
+    "negative_days": true,
+    "debt": true
+   },
+   "seconds": 47.1264846999984,
+   "cost_usd": 0.0054868,
+   "reason": "All three statements reconcile to their stated totals and balances; the $5,538.13 September transfer from share 3275 is excluded as an owner transfer and no MCA, term loan or equipment loan debits were identified.",
+   "detail": {
+    "avg_monthly_revenue": [
+     53677.76,
+     53677.76
+    ],
+    "avg_daily_balance": [
+     42114.92,
+     42114.93
+    ],
+    "nsf_count": [
+     0,
+     0
+    ],
+    "overdraft_count": [
+     0,
+     0
+    ],
+    "negative_days": [
+     0,
+     0
+    ],
+    "debt": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "app-037",
+   "variant": "digital",
+   "expected_verdict": "ready",
+   "verdict": "needs_review",
+   "figures": {
+    "revenue": true,
+    "avg_daily_balance": true,
+    "nsf_count": true,
+    "overdraft_count": true,
+    "negative_days": true,
+    "debt": true
+   },
+   "seconds": 26.741467300002114,
+   "cost_usd": 0.0065513,
+   "reason": "Sept 24 branch deposit of 35,842.11 is about 3x the largest other deposit in the file and may be loan or advance proceeds rather than revenue; confirm the source before relying on Sept revenue. Balances, totals and average daily balance reconcile to the statements.",
+   "detail": {
+    "avg_monthly_revenue": [
+     83983.14,
+     83983.14
+    ],
+    "avg_daily_balance": [
+     31125.39,
+     31125.39
+    ],
+    "nsf_count": [
+     0,
+     0
+    ],
+    "overdraft_count": [
+     0,
+     0
+    ],
+    "negative_days": [
+     0,
+     0
+    ],
+    "debt": [
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "id": "app-038",
+   "variant": "digital",
+   "expected_verdict": "ready",
+   "verdict": "needs_review",
+   "figures": {
+    "revenue": true,
+    "avg_daily_balance": false,
+    "nsf_count": true,
+    "overdraft_count": true,
+    "negative_days": true,
+    "debt": true
+   },
+   "seconds": 92.93882660000236,
+   "cost_usd": 0.020863600000000003,
+   "reason": "Every statement's credits reconcile to its summary totals after excluding owner savings transfers, and the June returned deposit of 1,105.70 is netted out. Needs human check: the same 6,860.11 Faire Wholesale item was charged two NSF fees of 35.00 (04/22 and 04/24); the June 15 12.00 returned-deposit fee is not reflected in the summary's returned-item count; and the May Sequoia payments total exactly equals the 05/26 deposit of 7,461.29. Average daily balance was computed by hand from the transaction detail over 183 days. Capital One card payments were treated as non-loan and no fixed-payment MCA or loan debits were found.",
+   "detail": {
+    "avg_monthly_revenue": [
+     92771.17,
+     92771.17
+    ],
+    "avg_daily_balance": [
+     21169.13,
+     20941.57
+    ],
+    "nsf_count": [
+     2,
+     2
+    ],
+    "overdraft_count": [
+     8,
+     8
+    ],
+    "negative_days": [
+     12,
+     12
+    ],
+    "debt": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "app-039",
+   "variant": "digital",
+   "expected_verdict": "ready",
+   "verdict": "needs_review",
+   "figures": {
+    "revenue": true,
+    "avg_daily_balance": true,
+    "nsf_count": true,
+    "overdraft_count": true,
+    "negative_days": true,
+    "debt": true
+   },
+   "seconds": 50.88723029999528,
+   "cost_usd": 0.0107323,
+   "reason": "Ten NSF/returned-item fees across the three later periods, plus repeated returned debits (Rapidline MCA, Faire Wholesale, Harborline loan, Heron Bay, Paychex, AZ Dept of Revenue) and intraday negative balances, indicate severe cash stress that the credit team should review manually. Revenue excludes owner transfers from savings 3988 and reversals of returned debits; the figures reconcile to each statement's opening and closing balances.",
+   "detail": {
+    "avg_monthly_revenue": [
+     94053.83,
+     94053.82
+    ],
+    "avg_daily_balance": [
+     10661.67,
+     10661.67
+    ],
+    "nsf_count": [
+     10,
+     10
+    ],
+    "overdraft_count": [
+     0,
+     0
+    ],
+    "negative_days": [
+     0,
+     0
+    ],
+    "debt": [
+     2,
+     2
+    ]
+   }
+  }
+ ]
+}

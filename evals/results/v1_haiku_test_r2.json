@@ -1,0 +1,687 @@
+{
+ "aggregate": {
+  "files": 15,
+  "errors": 0,
+  "figure_accuracy_pct": {
+   "revenue": 73.3,
+   "avg_daily_balance": 73.3,
+   "nsf_count": 100.0,
+   "overdraft_count": 100.0,
+   "negative_days": 93.3,
+   "debt": 100.0
+  },
+  "all_correct_pct": 73.3,
+  "straight_through_pct": 73.3,
+  "flag_rate_pct": 13.3,
+  "wrong_on_ready": 2,
+  "ready_files": 13,
+  "tamper_recall_pct": 50.0,
+  "false_alarm_pct": 0.0,
+  "seconds_per_file": 0.9,
+  "usd_per_file": 0.0314,
+  "by_variant": {
+   "digital": {
+    "files": 7,
+    "all_correct_pct": 100.0,
+    "flag_rate_pct": 0.0
+   },
+   "scanned": {
+    "files": 4,
+    "all_correct_pct": 100.0,
+    "flag_rate_pct": 0.0
+   },
+   "tampered": {
+    "files": 4,
+    "all_correct_pct": 0.0,
+    "flag_rate_pct": 50.0
+   }
+  }
+ },
+ "files": [
+  {
+   "id": "app-000",
+   "variant": "tampered",
+   "expected_verdict": "needs_review",
+   "verdict": "ready",
+   "figures": {
+    "revenue": false,
+    "avg_daily_balance": false,
+    "nsf_count": true,
+    "overdraft_count": true,
+    "negative_days": false,
+    "debt": true
+   },
+   "seconds": 1.0898872999969171,
+   "cost_usd": 0.0207204,
+   "reason": "All statements reconcile row by row, totals and balances tie across statements, and no sign of editing was found.",
+   "detail": {
+    "avg_monthly_revenue": [
+     64539.77,
+     62675.03
+    ],
+    "avg_daily_balance": [
+     12308.9,
+     10740.17
+    ],
+    "nsf_count": [
+     6,
+     6
+    ],
+    "overdraft_count": [
+     0,
+     0
+    ],
+    "negative_days": [
+     3,
+     6
+    ],
+    "debt": [
+     2,
+     2
+    ]
+   }
+  },
+  {
+   "id": "app-002",
+   "variant": "tampered",
+   "expected_verdict": "needs_review",
+   "verdict": "ready",
+   "figures": {
+    "revenue": false,
+    "avg_daily_balance": false,
+    "nsf_count": true,
+    "overdraft_count": true,
+    "negative_days": true,
+    "debt": true
+   },
+   "seconds": 1.1836448999965796,
+   "cost_usd": 0.0298851,
+   "reason": "All statements reconcile row by row, totals and balances tie across statements, and no sign of editing was found.",
+   "detail": {
+    "avg_monthly_revenue": [
+     75430.39,
+     73886.13
+    ],
+    "avg_daily_balance": [
+     46709.57,
+     46170.18
+    ],
+    "nsf_count": [
+     0,
+     0
+    ],
+    "overdraft_count": [
+     0,
+     0
+    ],
+    "negative_days": [
+     0,
+     0
+    ],
+    "debt": [
+     3,
+     3
+    ]
+   }
+  },
+  {
+   "id": "app-005",
+   "variant": "digital",
+   "expected_verdict": "ready",
+   "verdict": "ready",
+   "figures": {
+    "revenue": true,
+    "avg_daily_balance": true,
+    "nsf_count": true,
+    "overdraft_count": true,
+    "negative_days": true,
+    "debt": true
+   },
+   "seconds": 1.283326400007354,
+   "cost_usd": 0.0600981,
+   "reason": "All statements reconcile row by row, totals and balances tie across statements, and no sign of editing was found.",
+   "detail": {
+    "avg_monthly_revenue": [
+     57764.35,
+     57764.35
+    ],
+    "avg_daily_balance": [
+     31989.77,
+     31989.77
+    ],
+    "nsf_count": [
+     0,
+     0
+    ],
+    "overdraft_count": [
+     0,
+     0
+    ],
+    "negative_days": [
+     0,
+     0
+    ],
+    "debt": [
+     2,
+     2
+    ]
+   }
+  },
+  {
+   "id": "app-011",
+   "variant": "scanned",
+   "expected_verdict": "ready",
+   "verdict": "ready",
+   "figures": {
+    "revenue": true,
+    "avg_daily_balance": true,
+    "nsf_count": true,
+    "overdraft_count": true,
+    "negative_days": true,
+    "debt": true
+   },
+   "seconds": 0.9229029999987688,
+   "cost_usd": 0.0236745,
+   "reason": "All statements reconcile row by row, totals and balances tie across statements, and no sign of editing was found.",
+   "detail": {
+    "avg_monthly_revenue": [
+     185329.86,
+     185329.86
+    ],
+    "avg_daily_balance": [
+     53562.22,
+     53562.22
+    ],
+    "nsf_count": [
+     0,
+     0
+    ],
+    "overdraft_count": [
+     0,
+     0
+    ],
+    "negative_days": [
+     0,
+     0
+    ],
+    "debt": [
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "id": "app-016",
+   "variant": "digital",
+   "expected_verdict": "ready",
+   "verdict": "ready",
+   "figures": {
+    "revenue": true,
+    "avg_daily_balance": true,
+    "nsf_count": true,
+    "overdraft_count": true,
+    "negative_days": true,
+    "debt": true
+   },
+   "seconds": 1.207099899998866,
+   "cost_usd": 0.0526062,
+   "reason": "All statements reconcile row by row, totals and balances tie across statements, and no sign of editing was found.",
+   "detail": {
+    "avg_monthly_revenue": [
+     269572.72,
+     269572.72
+    ],
+    "avg_daily_balance": [
+     110987.7,
+     110987.7
+    ],
+    "nsf_count": [
+     0,
+     0
+    ],
+    "overdraft_count": [
+     0,
+     0
+    ],
+    "negative_days": [
+     0,
+     0
+    ],
+    "debt": [
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "id": "app-017",
+   "variant": "tampered",
+   "expected_verdict": "needs_review",
+   "verdict": "needs_review",
+   "figures": {
+    "revenue": false,
+    "avg_daily_balance": false,
+    "nsf_count": true,
+    "overdraft_count": true,
+    "negative_days": true,
+    "debt": true
+   },
+   "seconds": 0.812881899997592,
+   "cost_usd": 0.023271,
+   "reason": "possible tampering - statement 4: 36 text span(s) in font(s) BitstreamVeraSans-Roman used nowhere else in the file; possible tampering - statement 4: embeds a subset font (BitstreamVeraSans-Roman); its siblings embed none; possible tampering - statement 4: saved as an incremental update (2 cross-reference sections) - typical of PDF editors",
+   "detail": {
+    "avg_monthly_revenue": [
+     295833.8,
+     291842.64
+    ],
+    "avg_daily_balance": [
+     105081.66,
+     102205.92
+    ],
+    "nsf_count": [
+     0,
+     0
+    ],
+    "overdraft_count": [
+     0,
+     0
+    ],
+    "negative_days": [
+     0,
+     0
+    ],
+    "debt": [
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "id": "app-019",
+   "variant": "tampered",
+   "expected_verdict": "needs_review",
+   "verdict": "needs_review",
+   "figures": {
+    "revenue": false,
+    "avg_daily_balance": false,
+    "nsf_count": true,
+    "overdraft_count": true,
+    "negative_days": true,
+    "debt": true
+   },
+   "seconds": 0.7375279999978375,
+   "cost_usd": 0.0184967,
+   "reason": "possible tampering - statement 3: 67 text span(s) in font(s) BitstreamVeraSans-Roman used nowhere else in the file; possible tampering - statement 3: embeds a subset font (BitstreamVeraSans-Roman); its siblings embed none; possible tampering - statement 3: saved as an incremental update (2 cross-reference sections) - typical of PDF editors; statement 4 page 1: opens at 14,987.71 but the previous statement closed at 19,766.94",
+   "detail": {
+    "avg_monthly_revenue": [
+     38962.38,
+     37767.57
+    ],
+    "avg_daily_balance": [
+     10854.77,
+     10508.19
+    ],
+    "nsf_count": [
+     0,
+     0
+    ],
+    "overdraft_count": [
+     0,
+     0
+    ],
+    "negative_days": [
+     0,
+     0
+    ],
+    "debt": [
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "id": "app-020",
+   "variant": "scanned",
+   "expected_verdict": "ready",
+   "verdict": "ready",
+   "figures": {
+    "revenue": true,
+    "avg_daily_balance": true,
+    "nsf_count": true,
+    "overdraft_count": true,
+    "negative_days": true,
+    "debt": true
+   },
+   "seconds": 0.6552056999935303,
+   "cost_usd": 0.0365641,
+   "reason": "All statements reconcile row by row, totals and balances tie across statements, and no sign of editing was found.",
+   "detail": {
+    "avg_monthly_revenue": [
+     60184.8,
+     60184.8
+    ],
+    "avg_daily_balance": [
+     7499.41,
+     7499.41
+    ],
+    "nsf_count": [
+     2,
+     2
+    ],
+    "overdraft_count": [
+     7,
+     7
+    ],
+    "negative_days": [
+     8,
+     8
+    ],
+    "debt": [
+     2,
+     2
+    ]
+   }
+  },
+  {
+   "id": "app-021",
+   "variant": "digital",
+   "expected_verdict": "ready",
+   "verdict": "ready",
+   "figures": {
+    "revenue": true,
+    "avg_daily_balance": true,
+    "nsf_count": true,
+    "overdraft_count": true,
+    "negative_days": true,
+    "debt": true
+   },
+   "seconds": 0.4975794999918435,
+   "cost_usd": 0.025490099999999998,
+   "reason": "All statements reconcile row by row, totals and balances tie across statements, and no sign of editing was found.",
+   "detail": {
+    "avg_monthly_revenue": [
+     65178.3,
+     65178.3
+    ],
+    "avg_daily_balance": [
+     46981.38,
+     46981.38
+    ],
+    "nsf_count": [
+     0,
+     0
+    ],
+    "overdraft_count": [
+     0,
+     0
+    ],
+    "negative_days": [
+     0,
+     0
+    ],
+    "debt": [
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "id": "app-023",
+   "variant": "scanned",
+   "expected_verdict": "ready",
+   "verdict": "ready",
+   "figures": {
+    "revenue": true,
+    "avg_daily_balance": true,
+    "nsf_count": true,
+    "overdraft_count": true,
+    "negative_days": true,
+    "debt": true
+   },
+   "seconds": 0.6038390000030631,
+   "cost_usd": 0.046018,
+   "reason": "All statements reconcile row by row, totals and balances tie across statements, and no sign of editing was found.",
+   "detail": {
+    "avg_monthly_revenue": [
+     233563.92,
+     233563.92
+    ],
+    "avg_daily_balance": [
+     51559.57,
+     51559.57
+    ],
+    "nsf_count": [
+     0,
+     0
+    ],
+    "overdraft_count": [
+     2,
+     2
+    ],
+    "negative_days": [
+     1,
+     1
+    ],
+    "debt": [
+     2,
+     2
+    ]
+   }
+  },
+  {
+   "id": "app-024",
+   "variant": "digital",
+   "expected_verdict": "ready",
+   "verdict": "ready",
+   "figures": {
+    "revenue": true,
+    "avg_daily_balance": true,
+    "nsf_count": true,
+    "overdraft_count": true,
+    "negative_days": true,
+    "debt": true
+   },
+   "seconds": 0.7156765000108862,
+   "cost_usd": 0.027441,
+   "reason": "All statements reconcile row by row, totals and balances tie across statements, and no sign of editing was found.",
+   "detail": {
+    "avg_monthly_revenue": [
+     134695.65,
+     134695.65
+    ],
+    "avg_daily_balance": [
+     22159.22,
+     22159.22
+    ],
+    "nsf_count": [
+     1,
+     1
+    ],
+    "overdraft_count": [
+     4,
+     4
+    ],
+    "negative_days": [
+     6,
+     6
+    ],
+    "debt": [
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "id": "app-027",
+   "variant": "scanned",
+   "expected_verdict": "ready",
+   "verdict": "ready",
+   "figures": {
+    "revenue": true,
+    "avg_daily_balance": true,
+    "nsf_count": true,
+    "overdraft_count": true,
+    "negative_days": true,
+    "debt": true
+   },
+   "seconds": 0.5557179000024917,
+   "cost_usd": 0.0167897,
+   "reason": "All statements reconcile row by row, totals and balances tie across statements, and no sign of editing was found.",
+   "detail": {
+    "avg_monthly_revenue": [
+     53677.76,
+     53677.76
+    ],
+    "avg_daily_balance": [
+     42114.93,
+     42114.93
+    ],
+    "nsf_count": [
+     0,
+     0
+    ],
+    "overdraft_count": [
+     0,
+     0
+    ],
+    "negative_days": [
+     0,
+     0
+    ],
+    "debt": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "app-037",
+   "variant": "digital",
+   "expected_verdict": "ready",
+   "verdict": "ready",
+   "figures": {
+    "revenue": true,
+    "avg_daily_balance": true,
+    "nsf_count": true,
+    "overdraft_count": true,
+    "negative_days": true,
+    "debt": true
+   },
+   "seconds": 0.8945967000036035,
+   "cost_usd": 0.0192652,
+   "reason": "All statements reconcile row by row, totals and balances tie across statements, and no sign of editing was found.",
+   "detail": {
+    "avg_monthly_revenue": [
+     83983.14,
+     83983.14
+    ],
+    "avg_daily_balance": [
+     31125.39,
+     31125.39
+    ],
+    "nsf_count": [
+     0,
+     0
+    ],
+    "overdraft_count": [
+     0,
+     0
+    ],
+    "negative_days": [
+     0,
+     0
+    ],
+    "debt": [
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "id": "app-038",
+   "variant": "digital",
+   "expected_verdict": "ready",
+   "verdict": "ready",
+   "figures": {
+    "revenue": true,
+    "avg_daily_balance": true,
+    "nsf_count": true,
+    "overdraft_count": true,
+    "negative_days": true,
+    "debt": true
+   },
+   "seconds": 1.0287337999907322,
+   "cost_usd": 0.0483113,
+   "reason": "All statements reconcile row by row, totals and balances tie across statements, and no sign of editing was found.",
+   "detail": {
+    "avg_monthly_revenue": [
+     92771.17,
+     92771.17
+    ],
+    "avg_daily_balance": [
+     20941.57,
+     20941.57
+    ],
+    "nsf_count": [
+     2,
+     2
+    ],
+    "overdraft_count": [
+     8,
+     8
+    ],
+    "negative_days": [
+     12,
+     12
+    ],
+    "debt": [
+     0,
+     0
+    ]
+   }
+  },
+  {
+   "id": "app-039",
+   "variant": "digital",
+   "expected_verdict": "ready",
+   "verdict": "ready",
+   "figures": {
+    "revenue": true,
+    "avg_daily_balance": true,
+    "nsf_count": true,
+    "overdraft_count": true,
+    "negative_days": true,
+    "debt": true
+   },
+   "seconds": 0.9733913000090979,
+   "cost_usd": 0.0229579,
+   "reason": "All statements reconcile row by row, totals and balances tie across statements, and no sign of editing was found.",
+   "detail": {
+    "avg_monthly_revenue": [
+     94053.82,
+     94053.82
+    ],
+    "avg_daily_balance": [
+     10661.67,
+     10661.67
+    ],
+    "nsf_count": [
+     10,
+     10
+    ],
+    "overdraft_count": [
+     0,
+     0
+    ],
+    "negative_days": [
+     0,
+     0
+    ],
+    "debt": [
+     2,
+     2
+    ]
+   }
+  }
+ ]
+}
