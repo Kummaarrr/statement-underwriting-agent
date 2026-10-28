@@ -12,7 +12,7 @@ behind it, and the verdict is *Ready* or *Needs review* with the reason. The fig
 It is measured against synthetic statements with exact ground truth, including scans,
 innocently re-saved files and four kinds of doctored statements.
 
-**Write-up:** [docs/REPORT.md](docs/REPORT.md) · **Architecture:** [docs/architecture.md](docs/architecture.md) · **Demo:** `streamlit run app/streamlit_app.py` (live link below once deployed)
+**Write-up:** [docs/REPORT.md](docs/REPORT.md) · **Architecture:** [docs/architecture.md](docs/architecture.md) · **Live demo:** https://statement-underwriting-agent-ycgnoettucijclvazywgbe.streamlit.app/
 
 ## The story
 
